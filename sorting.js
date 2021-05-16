@@ -9,6 +9,7 @@ const array = [21, 1, 26, 45, 29, 28, 2, 9, 16, 49, 39, 27, 43, 34, 46, 40]
 // mergesort 6  [1, 21, 26, 45] [2, 9, 28, 29] [16, 27, 39, 49] [34, 40, 43, 46]
 // mergesort 7 [1, 2, 9, 21, 26, 28, 29, 45] [16, 27, 34, 39, 40, 43, 46, 49]
 // mergesort 8 [1, 2, 9, 16, 21, 26, 27, 28, 29, 34, 39, 40, 43, 45, 46, 49]
+
 function mergeSort(array) {
 
     if (array.length <= 1) {
@@ -17,9 +18,12 @@ function mergeSort(array) {
 
     const middle = Math.floor(array.length/2)
     let left = array.slice(0, middle)
+    // [21, 1, 26, 45, 29, 28, 2, 9] 
     let right = array.slice(middle, array.length)
+    // [16, 49, 39, 27, 43, 34, 46, 40]
 
     left = mergeSort(left)
+    // [21, 1, 26, 45]
     
     right = mergeSort(right)
     
