@@ -23,10 +23,10 @@ function mergeSort(array) {
     // [16, 49, 39, 27, 43, 34, 46, 40]
 
     left = mergeSort(left)
-    // [21, 1, 26, 45]
+    // left = [21, 1, 26, 45] right = [29, 28, 2, 9]
     
     right = mergeSort(right)
-    
+    // left = [16, 49, 39, 27] right = [43, 34, 46, 40]
     
     return merge(left, right, array)
 }
